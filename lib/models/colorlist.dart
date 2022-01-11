@@ -35,14 +35,10 @@ class ColorList extends StatelessWidget {
             ],
           ),
           child: Center(
-            child: Text(
-              name,
-              style: GoogleFonts.getFont(
-                _style,
-                fontSize: 50
-              ),
-            )
-          ),
+              child: Text(
+            name,
+            style: GoogleFonts.getFont(_style, fontSize: 45),
+          )),
         ),
       ),
       onTap: () {
