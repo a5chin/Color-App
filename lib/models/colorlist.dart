@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import './hexcolor.dart';
 import '../models/details.dart';
 
@@ -12,6 +13,8 @@ class ColorList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const String _style = 'Yuji Syuku';
+
     return GestureDetector(
       child: Hero(
         tag: color,
@@ -31,7 +34,15 @@ class ColorList extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(child: Text(name)),
+          child: Center(
+            child: Text(
+              name,
+              style: GoogleFonts.getFont(
+                _style,
+                fontSize: 50
+              ),
+            )
+          ),
         ),
       ),
       onTap: () {
