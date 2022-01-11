@@ -39,7 +39,7 @@ class ColorList extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return Details();
+              return Details(color, name);
             },
           ),
         );

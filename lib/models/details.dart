@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import './hexcolor.dart';
 
 class Details extends StatelessWidget {
-  Details({Key? key}) : super(key: key);
+  String color;
+  String name;
+
+  Details(this.color, this.name);
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +20,11 @@ class Details extends StatelessWidget {
           width: _size.width,
           margin: const EdgeInsets.all(30),
           decoration: BoxDecoration(
-            color: HexColor('895b8a'),
+            color: HexColor(color),
             borderRadius: BorderRadius.circular(20.0),
             boxShadow: [
               BoxShadow(
-                color: HexColor('895b8a'),
+                color: HexColor(color),
                 spreadRadius: 10.0,
                 blurRadius: 30.0,
                 offset: const Offset(10, 10),

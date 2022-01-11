@@ -47,8 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView(children: <Widget>[
-        for (var i = 0; i < _colors.length; i++)
-          ColorList(_size.height, _size.width, _colors[i], _names[i])
+        for (var i = 0; i < _colors.length; i += 2)
+          Row(
+            children: <Widget>[
+              ColorList(_size.height, (_size.width - 120) / 2, _colors[i], _names[i]),
+              ColorList(_size.height, (_size.width - 120) / 2, _colors[i + 1], _names[i + 1])
+            ]
+          )
       ]));
   }
 }
