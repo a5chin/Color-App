@@ -13,7 +13,9 @@ class Details extends StatelessWidget {
     final Size _size = MediaQuery.of(context).size;
 
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: const Text('Details'),
+        ),
         body: ClipPath(
           child: Container(
             color: HexColor(color),
