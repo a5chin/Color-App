@@ -26,6 +26,8 @@ class Details extends StatelessWidget {
                     child: Padding(
                         padding: EdgeInsets.only(top: _size.height / 6),
                         child: Center(
+                            child: Material(
+                          color: Colors.transparent,
                           child: SelectableText.rich(
                             TextSpan(children: <TextSpan>[
                               TextSpan(
@@ -39,7 +41,7 @@ class Details extends StatelessWidget {
                                   ))
                             ]),
                           ),
-                        ))),
+                        )))),
               ],
             ),
           ),
